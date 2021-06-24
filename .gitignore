@@ -77,7 +77,8 @@ celerybeat-schedule.*
 
 # Environments 
 .env 
-.venv 
+.venv
+django-env/ 
 env/ 
 venv/ 
 ENV/ 
