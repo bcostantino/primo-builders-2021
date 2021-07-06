@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+      <title>Primo Builders | {{title}}</title>
+    {% else %}
+      <title>Primo Builders</title>
+    {% endif %}
+  </head>
+  <body>
+    <header>
+
+    </header>
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
