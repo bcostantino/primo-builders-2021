@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="{% static 'home/bootstrap.css' %}">
     <meta charset="utf-8">
+    <!-- title in the tab on screen -->
     {% if title %}
       <title>Primo Builders | {{title}}</title>
     {% else %}
@@ -12,6 +13,7 @@
   </head>
   <body>
     <header>
+        <!-- navigation bar snippet -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Primo Builders</a>
@@ -22,12 +24,18 @@
             <div class="collapse navbar-collapse" id="navbarColor03">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Home
+                  <a class="nav-link active" href="/">Home
                     <span class="visually-hidden">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a id="about" class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a id="services" class="nav-link" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a id="areasOfServ" class="nav-link" href="/areasOfServ">Areas of Service</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -52,6 +60,26 @@
     <div class="container">
       {% block content %}
       {% endblock %}
+    </div>
+    <div class="col-md-4">
+      <div class="content-section">
+        <h3>Hire Us!</h3>
+    <!-- sidebar could be used for reaching out to primo on the basis
+        of a name number and email -->
+        <p class='text-muted'>Please enter your information:
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="fname" name="name"><br>
+                <label for="email">E-mail:</label><br>
+                <input type="text" id="lname" name="email"><br>
+                <label for="pnum">Phone number:</label><br>
+                <input type="text" id="lname" name="pnum"><br>
+                <label for="message">Message:</label><br>
+                <input type="text" id="lname" name="message"><br>
+            </form>
+
+        </p>
+      </div>
     </div>
   </body>
 </html>
